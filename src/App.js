@@ -1,9 +1,34 @@
 import React from "react";
-import logo from "./logo.svg";
+import {
+  BrowserRouter as Router,
+  Route,
+  Redirect,
+  Switch
+} from "react-router-dom";
 import "./App.css";
 
-function App() {
-  return <div className="App">Let's Start</div>;
-}
+//Import Pages
+import Users from "./User/Pages/Users";
+import NewPlace from "./Places/Pages/Place";
+import MainNavigation from "./Shared/Components/Navigation/MainNavigation/MainNavigation";
+
+const App = () => {
+  return (
+    <Router>
+      <MainNavigation />
+      <main>
+        <Switch>
+          <Route path="/" exact>
+            <Users />
+          </Route>
+          <Route path="/places/new">
+            <NewPlace />
+          </Route>
+          <Redirect to="/" />
+        </Switch>
+      </main>
+    </Router>
+  );
+};
 
 export default App;
