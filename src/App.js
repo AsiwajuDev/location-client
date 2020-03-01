@@ -9,7 +9,8 @@ import "./App.css";
 
 //Import Pages
 import Users from "./User/Pages/Users";
-import NewPlace from "./Places/Pages/Place";
+import NewPlace from "./Places/Pages/NewPlace";
+import UserPlaces from "./Places/Pages/UserPlaces";
 import MainNavigation from "./Shared/Components/Navigation/MainNavigation/MainNavigation";
 
 const App = () => {
@@ -20,6 +21,9 @@ const App = () => {
         <Switch>
           <Route path="/" exact>
             <Users />
+          </Route>
+          <Route path="/:userId/places" exact>
+            <UserPlaces />
           </Route>
           <Route path="/places/new">
             <NewPlace />
