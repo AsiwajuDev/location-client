@@ -9,7 +9,7 @@ import "./App.css";
 
 //Import Pages
 import Users from "./User/Pages/Users";
-import NewPlace from "./Places/Pages/NewPlace";
+import NewPlace from "./Places/Pages/NewPlace/NewPlace";
 import UserPlaces from "./Places/Pages/UserPlaces";
 import MainNavigation from "./Shared/Components/Navigation/MainNavigation/MainNavigation";
 
