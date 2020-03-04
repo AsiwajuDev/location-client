@@ -1,10 +1,12 @@
 import React from "react";
 
+import Input from "../../Shared/Components/FormElements/Form Input/Input";
+
 const Place = () => {
   return (
-    <div>
-      <h2>New Place Works!</h2>
-    </div>
+    <form className="place-form">
+      <Input />
+    </form>
   );
 };
 
